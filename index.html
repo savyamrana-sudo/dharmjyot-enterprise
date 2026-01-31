@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmjyot Enterprise - Samsung Exclusive Store | Gandhinagar</title>
+    <meta name="description" content="Samsung Exclusive Store & Authorized Service Center in Gandhinagar. Pre-book Samsung S25 Ultra, get expert service, and explore the latest Samsung devices.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --samsung-blue: #1428A0;
+            --samsung-light-blue: #3d5afe;
+            --accent-gold: #FFB800;
+            --dark-bg: #0a0e27;
+            --light-text: #ffffff;
+            --gray-text: #a0aec0;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0d1128 100%);
+            color: var(--light-text);
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(20, 40, 160, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(61, 90, 254, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 184, 0, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 14, 39, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            animation: slideDown 0.6s ease-out;
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--samsung-blue), var(--samsung-light-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-contact {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .phone-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--light-text);
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .phone-btn:hover {
+            background: var(--card-bg);
+            border-color: var(--samsung-light-blue);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: 85vh;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--samsung-blue), var(--samsung-light-blue));
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .highlight {
+            color: var(--accent-gold);
+            -webkit-text-fill-color: var(--accent-gold);
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--gray-text);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--samsung-blue), var(--samsung-light-blue));
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(20, 40, 160, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(20, 40, 160, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--card-bg);
+            border-color: var(--samsung-light-blue);
+            transform: translateY(-3px);
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .phone-mockup {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            filter: drop-shadow(0 30px 60px rgba(20, 40, 160, 0.4));
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .phone-mockup img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Services Section */
+        .services {
+            max-width: 1400px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease-out both;
+        }
+        
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--samsung-light-blue);
+            box-shadow: 0 20px 50px rgba(20, 40, 160, 0.2);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .service-card h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: var(--gray-text);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        /* Trust Signal */
+        .trust-signal {
+            max-width: 1400px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .trust-badge {
+            background: linear-gradient(135deg, rgba(20, 40, 160, 0.2), rgba(61, 90, 254, 0.1));
+            border: 2px solid var(--samsung-blue);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .trust-badge h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--samsung-light-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .trust-badge p {
+            color: var(--gray-text);
+            font-size: 1.1rem;
+        }
+        
+        .verified-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        /* Location Section */
+        .location {
+            max-width: 1400px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .location-info {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .location-info h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .location-details {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .location-details p {
+            color: var(--gray-text);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-details strong {
+            color: var(--light-text);
+        }
+        
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+            height: 400px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* WhatsApp CTA */
+        .whatsapp-cta {
+            max-width: 1400px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .whatsapp-box {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 25px;
+            padding: 4rem 3rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(37, 211, 102, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .whatsapp-box h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .whatsapp-box p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .btn-whatsapp {
+            background: white;
+            color: #25D366;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.95);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem 2rem;
+            margin-top: 6rem;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--samsung-light-blue);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: var(--gray-text);
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--light-text);
+        }
+        
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--gray-text);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 4rem 2rem 3rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-contact {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-box {
+                padding: 2.5rem 1.5rem;
+            }
+            
+            .whatsapp-box h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Dharmjyot Enterprise</div>
+            <div class="nav-contact">
+                <a href="tel:+919876543210" class="phone-btn">📞 Call Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🔥 NEW LAUNCH</div>
+            <h1>
+                Samsung Galaxy <span class="highlight">S25 Ultra</span><br>
+                Now Available
+            </h1>
+            <p class="hero-description">
+                Pre-book the latest Samsung flagship at your trusted Samsung Exclusive Store in Gandhinagar. Experience cutting-edge technology with expert guidance.
+            </p>
+            <div class="cta-buttons">
+                <a href="#whatsapp" class="btn-primary">Pre-book Now</a>
+                <a href="#location" class="btn-secondary">Visit Store</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="phone-mockup">
+                <svg viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Phone Body -->
+                    <rect x="20" y="20" width="360" height="760" rx="50" fill="url(#phoneGradient)" stroke="#1428A0" stroke-width="2"/>
+                    
+                    <!-- Screen -->
+                    <rect x="30" y="40" width="340" height="720" rx="40" fill="#000"/>
+                    
+                    <!-- Display Content -->
+                    <rect x="40" y="60" width="320" height="680" rx="30" fill="url(#screenGradient)"/>
+                    
+                    <!-- Camera Cutout -->
+                    <circle cx="200" cy="80" r="8" fill="#0a0e27"/>
+                    
+                    <!-- Samsung Logo -->
+                    <text x="200" y="400" text-anchor="middle" font-family="Arial" font-size="32" font-weight="bold" fill="#fff">SAMSUNG</text>
+                    <text x="200" y="440" text-anchor="middle" font-family="Arial" font-size="48" font-weight="bold" fill="#1428A0">S25 Ultra</text>
+                    
+                    <!-- Decorative Elements -->
+                    <circle cx="80" cy="200" r="40" fill="rgba(20, 40, 160, 0.2)"/>
+                    <circle cx="320" cy="600" r="60" fill="rgba(255, 184, 0, 0.2)"/>
+                    
+                    <defs>
+                        <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#2a2e4a;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1a1f3a;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#1428A0;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#0a0e27;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-icon">📱</span>
+                <h3>Premium Sales</h3>
+                <p>Latest Samsung smartphones, tablets, and laptops with exclusive offers. Expert guidance to help you choose the perfect device for your needs.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🔧</span>
+                <h3>Authorized Service Center</h3>
+                <p>Genuine parts, certified technicians, and quick turnaround. Your Samsung devices are in safe hands with our expert service team.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🎧</span>
+                <h3>Accessories & More</h3>
+                <p>Complete range of original Samsung accessories including cases, chargers, earbuds, and smartwatches to complement your device.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signal -->
+    <section class="trust-signal">
+        <div class="trust-badge">
+            <span class="verified-icon">✓</span>
+            <h2>Samsung Exclusive Store & Authorized Service Center</h2>
+            <p>Official Samsung Partner | Certified Excellence | Trusted by Thousands</p>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="location-grid">
+            <div class="location-info">
+                <h2>Visit Our Store</h2>
+                <div class="location-details">
+                    <p><strong>📍 Address:</strong><br>
+                    Dharmjyot Enterprise<br>
+                    Gandhinagar, Gujarat</p>
+                    
+                    <p><strong>🕐 Store Hours:</strong><br>
+                    Mon - Sat: 10:00 AM - 8:00 PM<br>
+                    Sunday: 11:00 AM - 6:00 PM</p>
+                    
+                    <p><strong>📞 Contact:</strong><br>
+                    +91 98765 43210</p>
+                </div>
+                <a href="https://maps.google.com" target="_blank" class="btn-primary">Get Directions</a>
+            </div>
+            <div class="map-container">
+                <!-- Replace with your actual Google Maps embed -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117763.7072297146!2d72.56311!3d23.2156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2adec5f02c87%3A0xebd8851d57ce0a83!2sGandhinagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA -->
+    <section class="whatsapp-cta" id="whatsapp">
+        <div class="whatsapp-box">
+            <h2>Have Questions? Let's Chat!</h2>
+            <p>Get instant updates on S25 Ultra availability, pricing, and service status</p>
+            <a href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20Samsung%20S25%20Ultra" target="_blank" class="btn-whatsapp">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Chat on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Dharmjyot Enterprise</h3>
+                <p>Your trusted Samsung partner in Gandhinagar. Bringing you the latest technology with exceptional service.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#services">Our Services</a>
+                <a href="#location">Store Location</a>
+                <a href="#whatsapp">Contact Us</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📞 +91 98765 43210</p>
+                <p>📧 info@dharmjyot.com</p>
+                <p>📍 Gandhinagar, Gujarat</p>
+            </div>
+            <div class="footer-section">
+                <h3>Store Hours</h3>
+                <p>Monday - Saturday:<br>10:00 AM - 8:00 PM</p>
+                <p>Sunday:<br>11:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dharmjyot Enterprise. All rights reserved. | Samsung Exclusive Store & Authorized Service Center</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
